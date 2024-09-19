@@ -38,5 +38,10 @@ image_path = 'week_rota.jpg'
 intents = discord.Intents.default()
 intents.message_content = True
 
+# get the home assistant webhook URL from secrets.txt (local, non-tracked file) 
+with open('secrets.txt', 'r') as file:
+    lines = file.readlines()
+bot_token = lines[1].strip()
+
 client = MyClient(intents=intents)
-client.run('MTI2NjA5NTAxNzE2MDYwOTc5Mw.GlkUS9.yOOmvuUyVw3hotlZPEwH2bYyq8EkCcjXAWnHiY')
+client.run(bot_token)
