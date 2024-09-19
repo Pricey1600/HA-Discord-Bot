@@ -71,22 +71,16 @@ for x in result_split:
         #print("Found a day")
         reset_variables()
         day = x
-
     elif re.search("[a-zA-Z][a-zA-Z][a-zA-Z]", x):
-        month_found = False
         for m in months:
             if m in x.lower():
                 #print("Found a month")
-                month_found = True
                 month = months[m]
                 if (todays_date.month + int(month)) < (int(month)*2)-1:
                     print("Rota found for next year")
                     year = todays_date.year + 1
                 else:
-                    year = todays_date.year 
-        if month_found == False:
-            #print('didnt find a month')
-            continue
+                    year = todays_date.year
     else:
-        #print('didnt find either')
+        #print('didnt find anything')
         continue

@@ -19,7 +19,7 @@ class MyClient(discord.Client):
 
         if len(message.attachments) > 0:
             print('Image found')
-            #print(message.attachments)
+            
             image_url = message.attachments[0].url
             print('Image URL: '+image_url)
 
@@ -31,7 +31,6 @@ class MyClient(discord.Client):
 
             await message.channel.send('Rota recieved! Working on adding it to your calendar now!')
 
-            #time.sleep(5)
             subprocess.run(["python", "ocr.py"])
             
 image_path = 'week_rota.jpg'
