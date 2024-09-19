@@ -5,7 +5,7 @@ This was created due to the app my employer uses to manage rotas being unreliabl
 
 In my personal set-up this is running in a Docker container on a small home server; allowing dependencies and packages to be installed automatically. However, the OCR training data does cause the image size to push above 1GB.
 
-NOTE: The Home Assistant webhook URL exists on the first line of a local, non-tracked file called 'secrets.txt'.
+NOTE: The Home Assistant webhook URL exists on the first line of a local, non-tracked file called 'secrets.txt' and the bot token exists on the second line of the same file.
 
 ![Discord bot receiving a rota](demo_screenshots/discord_bot_screenshot.png)
 
