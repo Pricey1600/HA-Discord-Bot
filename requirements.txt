@@ -1,0 +1,4 @@
+requests
+pillow
+discord.py
+easyocr
