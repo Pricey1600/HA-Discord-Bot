@@ -1,7 +1,5 @@
 import requests
-from PIL import Image
 import discord
-import time
 import subprocess
 
 class MyClient(discord.Client):
