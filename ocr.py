@@ -63,7 +63,7 @@ for x in result_split:
             #send shift set to be formatted
             format_shift()
             #send shift to HA
-            #send_to_HA(shift)
+            send_to_HA(shift)
         else:
             print("ERROR: Both time variables are already populated")
     elif re.search("[0-3][0-9]", x):
@@ -71,7 +71,7 @@ for x in result_split:
         reset_variables()
         day = x
 
-    elif re.search("[a-zA-Z][a-zA-Z][a-zA-Z].", x):
+    elif re.search("[a-zA-Z][a-zA-Z][a-zA-Z]", x):
         month_found = False
         for m in months:
             if m in x.lower():
@@ -79,13 +79,13 @@ for x in result_split:
                 month_found = True
                 month = months[m]
                 #print(todays_date.month + int('08'))
-                if todays_date.month + int(month) < (int(month)*2)-1:
+                if (todays_date.month + int(month)) < (int(month)*2)-1:
                     print("Rota found for next year")
                     year = todays_date.year + 1
                 else:
                     year = todays_date.year 
         if month_found == False:
-            print('didnt find either')
+            print('didnt find a month')
     else:
         print('didnt find either')
 
