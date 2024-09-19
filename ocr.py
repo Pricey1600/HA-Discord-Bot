@@ -4,7 +4,7 @@ import requests
 import time
 from datetime import datetime
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+#pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 
 result = pytesseract.image_to_string('week_rota.jpg', lang='eng', config='--psm 6', output_type='string')

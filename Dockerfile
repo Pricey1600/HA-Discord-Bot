@@ -4,8 +4,9 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install -r requirements.txt
+RUN apt-get update
+RUN apt-get install tesseract-ocr -y
 
-RUN sudo apt install tesseract-ocr -y
+RUN pip install -r requirements.txt
 
 ENTRYPOINT ["python", "bot.py"]
