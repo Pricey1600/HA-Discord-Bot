@@ -1,2 +1,6 @@
 /testing
 week_rota.jpg
+*.gitignore
+*.git
+/demo_screenshots
+README.md
