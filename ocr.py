@@ -76,7 +76,7 @@ for x in result_split:
             if m in x.lower():
                 #print("Found a month")
                 month = months[m]
-                if (todays_date.month + int(month)) < (int(month)*2)-1:
+                if todays_date.month > (int(month)+1): #the +1 is the backwards month tolerence. if I give a rota for the previous month it will treat it as the previous month not next year.
                     print("Rota found for next year")
                     year = todays_date.year + 1
                 else:
